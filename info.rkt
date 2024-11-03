@@ -7,7 +7,7 @@
 (define pkg-desc "Queues for typed racket")
 
 (define deps '("base" "typed-racket-lib"))
-(define build-deps '())
+#;(define build-deps '())
 
 (define clean '("compiled" "private/compiled"))
 (define test-omit-paths '(#px"^((?!/tests/).)*$"))
