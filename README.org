@@ -14,7 +14,7 @@ The ~unsafe-typed-data-queue~ package provides a typed wrapper around the
 ~data/queue~ module in Racket, making it accessible to Typed Racket with correct
 typing for enqueuing, dequeuing, and checking queue properties. It introduces
 specific types to manage both read and write operations using Racket's ~Parameter~
-type to simulate contravariant types.
+type to simulate invariant types.
 
 ** Installation
 You can install the package from the Racket package manager using:
