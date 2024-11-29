@@ -1,7 +1,7 @@
 #lang info
 
 (define license 'MIT)
-(define collection "unsafe")
+(define collection "typed")
 (define version "0.0")
 
 (define pkg-desc "Queues for typed racket")

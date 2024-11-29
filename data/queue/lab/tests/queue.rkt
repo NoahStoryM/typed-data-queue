@@ -1,6 +1,6 @@
 #lang typed/racket/base
 
-(require "../../queue.rkt" typed/rackunit)
+(require "../../lab.rkt" typed/rackunit)
 
 
 (test-case "Test queue creation"

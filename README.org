@@ -1,4 +1,4 @@
-#+TITLE: unsafe-typed-data-queue
+#+TITLE: typed-data-queue-lab
 #+AUTHOR: Noah Ma
 #+EMAIL: noahstorym@gmail.com
 
@@ -10,7 +10,7 @@
   - [[#license][License]]
 
 * Typed Racket-Compatible Queue Library
-The ~unsafe-typed-data-queue~ package provides a typed wrapper around the
+The ~typed-data-queue-lab~ package provides a typed wrapper around the
 ~data/queue~ module in Racket, making it accessible to Typed Racket with correct
 typing for enqueuing, dequeuing, and checking queue properties. It introduces
 specific types to manage both read and write operations using Racket's ~Parameter~
@@ -19,7 +19,7 @@ type to simulate invariant types.
 ** Installation
 You can install the package from the Racket package manager using:
 #+begin_src shell
-raco pkg install unsafe-typed-data-queue
+raco pkg install typed-data-queue-lab
 #+end_src
 
 ** Usage
@@ -27,8 +27,8 @@ The package provides a typed API for creating and managing queues in Typed Racke
 
 ** Technical Details
 Typed Racket currently lacks support for contravariant types in type constructors,
-so ~unsafe-typed-data-queue~ relies on a ~Queueof~ struct with ~Parameter~ types
+so ~typed-data-queue-lab~ relies on a ~Queueof~ struct with ~Parameter~ types
 for read and write constraints.
 
 ** License
-~unsafe-typed-data-queue~ is distributed under the MIT License.
+~typed-data-queue-lab~ is distributed under the MIT License.
