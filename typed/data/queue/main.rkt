@@ -13,7 +13,7 @@
 (provide QueueTop QueueBot)
 
 (unsafe-require/typed/provide data/queue
-  [make-queue (∀ (w r) (→ (Queue w r)))]
+  [make-queue (∀ (t) (→ (Queue t t)))]
 
   [enqueue! (∀ (w) (→ (Queue w Any) w Void))]
   [enqueue-front! (∀ (w) (→ (Queue w Any) w Void))]
