@@ -17,9 +17,8 @@
 
   [queue? (pred QueueTop)]
   [queue-empty? (→ QueueTop Boolean)]
-  [non-empty-queue? (∀ (w r)
-                       (case→
-                        (→ (Queue w r) Boolean)
-                        (→ Any Boolean : #:+ QueueTop)))]
+  [non-empty-queue? (case→
+                     (→ QueueTop Boolean)
+                     (→ Any Boolean : #:+ QueueTop))]
 
   [in-queue (∀ (r) (→ (Queue Nothing r) (Sequenceof r)))])
