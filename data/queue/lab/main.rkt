@@ -1,16 +1,9 @@
 #lang typed/racket/base
 
-(require typed/racket/unsafe)
+(require typed/racket/unsafe
+         "private/types.rkt")
 
-;; TODO (Queueof t) → (Queueof t t)
-(struct (w r) Queueof ([_ : (Parameter w r)]))
-#;(struct (a ...) _ ([_ : (Parameter a ...)]) #:type-name Queueof) ; not work well
-(define-type (Queue w r) (Queueof w r)) ; avoid printing #(struct:Queueof ...)
-(provide Queue (rename-out [Queue Queueof]))
-
-(define-type QueueTop (Queue Nothing Any))
-(define-type QueueBot (Queue Any Nothing))
-(provide QueueTop QueueBot)
+(provide (all-from-out "private/types.rkt"))
 
 (unsafe-require/typed/provide data/queue
   [make-queue (∀ (t) (→ (Queue t t)))]
