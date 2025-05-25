@@ -1,11 +1,10 @@
-#lang typed/racket/base
+#lang typed/racket/base/optional
 
-(require typed/racket/unsafe
-         "private/types.rkt")
+(require "private/types.rkt")
 
 (provide (all-from-out "private/types.rkt"))
 
-(unsafe-require/typed/provide data/queue
+(require/typed/provide data/queue
   [make-queue (∀ (t) (→ (Queue t t)))]
 
   [enqueue! (∀ (w) (→ (Queue w Any) w Void))]
