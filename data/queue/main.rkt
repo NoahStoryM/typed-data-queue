@@ -7,11 +7,11 @@
 (require/typed/provide data/queue
   [make-queue (∀ (t) (→ (Queue t t)))]
 
-  [enqueue! (∀ (w) (→ (Queue w Any) w Void))]
-  [enqueue-front! (∀ (w) (→ (Queue w Any) w Void))]
-  [dequeue! (∀ (r) (→ (Queue Nothing r) r))]
+  [enqueue! (∀ (-t) (→ (Queue -t Any) -t Void))]
+  [enqueue-front! (∀ (-t) (→ (Queue -t Any) -t Void))]
+  [dequeue! (∀ (+t) (→ (Queue Nothing +t) +t))]
 
-  [queue->list (∀ (r) (→ (Queue Nothing r) (Listof r)))]
+  [queue->list (∀ (+t) (→ (Queue Nothing +t) (Listof +t)))]
   [queue-length (→ QueueTop Index)]
 
   [queue? (pred QueueTop)]
@@ -20,4 +20,4 @@
                      (→ QueueTop Boolean)
                      (→ Any Boolean : #:+ QueueTop))]
 
-  [in-queue (∀ (r) (→ (Queue Nothing r) (Sequenceof r)))])
+  [in-queue (∀ (+t) (→ (Queue Nothing +t) (Sequenceof +t)))])
